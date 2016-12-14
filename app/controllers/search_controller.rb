@@ -3,4 +3,9 @@ class SearchController < ApplicationController
     @search_param = params[:zipcode]
   end
   
+  def find_nearest_stations
+    
+    
+  end
+  
 end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "user visits the page" do
+describe "user visits the site" do
   context "a user visits root" do
     scenario "they see a search form" do
       visit '/'
