@@ -3,7 +3,6 @@ class StationService
     @nrel_api_key = nrel_api_key
     @conn = Faraday.new(:url => 'https://developer.nrel.gov') do |faraday|
       faraday.request :url_encoded
-      faraday.response :logger
       faraday.adapter Faraday.default_adapter
       faraday.params['api_key'] = nrel_api_key
     end

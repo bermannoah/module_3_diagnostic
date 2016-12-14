@@ -5,8 +5,11 @@ describe 'StationService' do
     it 'returns nearest stations for a user', :vcr do
       zipcode = 80203
       stations = StationService.new(ENV['NREL_API_KEY']).stations(zipcode)
+      results = JSON.parse(stations.body)
       
-      expect(stations.count).to eq(10)
+      expect(results.count).to eq(8)
     end
+    
+    
   end
 end
