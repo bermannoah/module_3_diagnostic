@@ -11,6 +11,10 @@ describe 'a user searches for stations' do
       
       expect(page).to have_content 'Stations near 80203'
       expect(page).to have_content 'UDR'
+      expect(page).to have_content '800 Acoma St, CO, 80204'
+      expect(page).to have_content 'ELEC'
+      expect(page).to have_content '0.3117'
+      expect(page).to have_content '24 hours daily'
     end
   end
 end
