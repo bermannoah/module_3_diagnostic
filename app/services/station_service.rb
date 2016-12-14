@@ -12,8 +12,8 @@ class StationService
     @conn.get do |req|
       req.url '/api/alt-fuel-stations/v1/nearest.json?'
       req.params['location'] = zipcode
-      req.params['fuel_type'] = "ELEC,LPG"
       req.params['radius'] = 6.0
+      req.params['fuel_type'] = "ELEC,LPG"
       req.params['limit'] = 10
     end
   end  
