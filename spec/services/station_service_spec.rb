@@ -6,7 +6,7 @@ describe 'StationService' do
       zipcode = 80203
       stations = StationService.new.stations(zipcode)
       results = JSON.parse(stations.body)
-      
+
       expect(results.count).to eq(8)
     end
     

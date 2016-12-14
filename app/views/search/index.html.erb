@@ -1,1 +1,13 @@
 <h2>Stations near <%= @search_param %></h2>
+
+<% @stations_object.each do |station| %>
+<ul>  
+  <li>Name: <%= station["station_name"] %></li>
+  <li>Address: <%= station["street_address"] %>, <%= station["state"] %>, <%= station["zip"] %></li> 
+  <li>Fuel type: <%= station["fuel_type_code"] %></li>
+  <li>Distance: <%= station["distance"] %></li>
+  <li>Access days and times: <%= station["access_days_time"] %></li>
+</ul>
+<br />
+<% end %>
+

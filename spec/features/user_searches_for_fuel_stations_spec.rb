@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'a user searches for stations' do
   context 'a user enters a zipcode' do
-    xscenario 'a user sees nearest stations' do
+    scenario 'a user sees nearest stations', :vcr do
       visit '/'
       
       fill_in 'zipcode', with: '80203'
@@ -10,7 +10,7 @@ describe 'a user searches for stations' do
       click_button 'Locate'
       
       expect(page).to have_content 'Stations near 80203'
-      expect(page).to have_content 'ChargePoint Network'
+      expect(page).to have_content 'UDR'
     end
   end
 end

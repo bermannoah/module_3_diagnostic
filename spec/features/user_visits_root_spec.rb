@@ -8,7 +8,7 @@ describe "user visits the site" do
       expect(page).to have_field('navbar-search-field') 
     end
     
-    scenario "they enter a zip code in the form" do
+    scenario "they enter a zip code in the form", :vcr do
       visit '/'
       
       fill_in 'zipcode', with: '80203'
