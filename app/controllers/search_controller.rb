@@ -1,7 +1,9 @@
 class SearchController < ApplicationController
+  
   def index
     @search_param = params[:zipcode]
-    @stations_object = find_nearest_stations(@search_param)
+    stations_object = find_nearest_stations(@search_param)
+    @stations_presenter = StationsPresenter.new(stations_object)
   end
   
   def find_nearest_stations(search_parameter)
